@@ -14,7 +14,7 @@
     <nav class="navbar container  is-max-desktop" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="https://bulma.io">
-                <img src="./img/CatWiki_logo.png" alt="CatWiki logo">
+                <img src="./img/logo.png" alt="CatWiki logo">
                 <p class="title pl-2">Meowgle</p>
             </a>
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
@@ -27,31 +27,36 @@
     </nav>
 
     <div class="container mt-4 p-4 is-max-desktop">
-
-        <div class="field">
-            <label class="label">Email</label>
-            <div class="control">
-                <input class="input" type="email" placeholder="Enter Your Email">
+        <form action="php/login.php" method="post">
+            <div class="field">
+                <label class="label">Email</label>
+                <div class="control">
+                    <input class="input" type="email" name="email" placeholder="Enter Your Email">
+                </div>
             </div>
-        </div>
 
-        <div class="field">
-            <label class="label">Password</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="Enter Your Password">
+            <div class="field">
+                <label class="label">Password</label>
+                <div class="control">
+                    <input class="input" type="password" name="password" placeholder="Enter Your Password">
+                </div>
             </div>
-        </div>
 
-
-        <div class="field is-grouped">
-            <div class="control">
-                <button class="button is-link">Log In</button>
+            <div class="field is-grouped">
+                <div class="control">
+                    <button class="button is-link">Log In</button>
+                </div>
+                <div class="control">
+                    <button class="button is-link is-light">Cancel</button>
+                </div>
             </div>
-            <div class="control">
-                <button class="button is-link is-light">Cancel</button>
-            </div>
-        </div>
+            <p class="m-4">
+                Don't have an account yet? <a href="signup.html">Sign up</a>
+            </p>
+        </form>
     </div>
+
+
 
     <footer class="footer">
         <div class="content has-text-centered">

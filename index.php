@@ -14,7 +14,7 @@
     <nav class="navbar container  is-max-desktop" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="https://bulma.io">
-                <img src="./img/CatWiki_logo.png" alt="CatWiki logo">
+                <img src="src/img/logo.png" alt="CatWiki logo">
                 <p class="title pl-2">Meowgle</p>
             </a>
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
@@ -39,13 +39,13 @@
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                        <a class="button is-primary js-modal-trigger">
+                        <a class="button is-primary" href="/src/login.html">
                             <strong>Log In</strong>
                         </a>
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
     </nav>
 
 
@@ -59,9 +59,9 @@
                     about
                     their behaviors, or simply want to admire adorable cat pictures, you've come to the right place.</p>
             </div>
-            <img class="image is-128x128" src="./img/CatIlustration.jpg" alt="Cat Ilustration">
+            <img class="image is-128x128" src="/src/img/ilustration.jpg" alt="Cat Ilustration">
         </div>
-        <button class="button is-primary mt-4">Get Started</button>
+        <a class="button is-primary mt-4" href="src/login.html">Get Started</a>
     </section>
 
     <section class="section container  is-max-desktop">

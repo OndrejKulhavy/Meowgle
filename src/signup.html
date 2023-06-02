@@ -27,52 +27,53 @@
     </nav>
 
     <div class="container mt-4 p-4 is-max-desktop">
-        <div class="field">
-            <label class="label">First Name</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="Enter Your First Name">
+        <form action="php/signup.php" method="post">
+            <div class="field">
+                <label class="label">First Name</label>
+                <div class="control">
+                    <input class="input" type="text" name="first_name" placeholder="Enter Your First Name">
+                </div>
             </div>
-        </div>
 
-        <div class="field">
-            <label class="label">Last Name</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="Enter Your Last Name">
+            <div class="field">
+                <label class="label">Last Name</label>
+                <div class="control">
+                    <input class="input" type="text" name="last_name" placeholder="Enter Your Last Name">
+                </div>
             </div>
-        </div>
 
-        <div class="field">
-            <label class="label">Email</label>
-            <div class="control">
-                <input class="input" type="email" placeholder="Enter Your Email">
+            <div class="field">
+                <label class="label">Email</label>
+                <div class="control">
+                    <input class="input" type="email" name="email" placeholder="Enter Your Email">
+                </div>
             </div>
-        </div>
 
-        <div class="field">
-            <label class="label">Password</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="Enter Your Password">
+            <div class="field">
+                <label class="label">Password</label>
+                <div class="control">
+                    <input class="input" type="password" name="password" placeholder="Enter Your Password">
+                </div>
             </div>
-        </div>
 
-        <div class="field">
-            <label class="label">Confirm Password</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="Confirm Your Password">
+            <div class="field">
+                <label class="label">Confirm Password</label>
+                <div class="control">
+                    <input class="input" type="password" name="confirm_password" placeholder="Confirm Your Password">
+                </div>
             </div>
-            <p class="help is-danger">The passwords do not match!</p>
 
-        </div>
-
-
-        <div class="field is-grouped">
-            <div class="control">
-                <button class="button is-link">Submit</button>
+            <div class="field is-grouped">
+                <div class="control">
+                    <button class="button is-link">Submit</button>
+                </div>
+                <div class="control">
+                    <a href="login.php" class="button is-link is-light">Log In</a>
+                </div>
             </div>
-            <div class="control">
-                <button class="button is-link is-light">Cancel</button>
-            </div>
-        </div>
+        </form>
+
+    </div>
     </div>
 
     <footer class="footer">
