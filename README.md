@@ -1,7 +1,7 @@
 Meowgle 😼 - Cat Search Engine
 =======
 
-Welcome to the Meowgle repository! This is a web application developed as the final project for the 3rd year of studies at SPŠE Ječná. Meowgle is a search engine for cats and provides information about various cat breeds. The name "Meowgle" is a combination of "meow" (the sound cats make) and "Google" (the popular search engine).
+Welcome to the Meowgle repository! This is a web application developed as the final project for the 3rd year of studies at [SPŠE Ječná](www.spsejecna.cz). Meowgle is a search engine for cats and provides information about various cat breeds. The name "Meowgle" is a combination of "meow" (the sound cats make) and "Google" (the popular search engine).
 
 Technologies Used
 -----------------
@@ -55,4 +55,3 @@ Contact
 If you have any questions, suggestions, or feedback, please feel free to contact the project maintainers:
 
 *   [Ondřej Kulhavý](mailto:okulhav@gmail.com)
-*   [SPŠE Ječná](http://www.spsejecna.cz/)
