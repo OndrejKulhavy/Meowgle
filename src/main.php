@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,8 +18,7 @@
                 <img src="./img/CatWiki_logo.png" alt="CatWiki logo">
                 <p class="title pl-2">Meowgle</p>
             </a>
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-                data-target="navbarBasicExample">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
@@ -32,7 +32,7 @@
 
                 <div class="navbar-item">
                     <div>
-                        <a class="button is-danger is-light">
+                        <a class="button is-danger is-light" href="?logout=true">
                             <strong>Log Out</strong>
                         </a>
                     </div>
@@ -42,7 +42,6 @@
     <div class="field container is-max-desktop mt-4">
         <div class="control is-flex">
             <input class="input" type="text" placeholder="Search">
-            <!--    button-->
             <button class="ml-4 button">Search</button>
         </div>
     </div>

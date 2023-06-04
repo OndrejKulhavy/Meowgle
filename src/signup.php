@@ -1,3 +1,15 @@
+<?php
+// Start the session
+session_start();
+
+// Database connection
+$servername = "localhost";
+$username = "root";
+$password = "Synkova574574";
+$dbname = "meowgle";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,8 +29,7 @@
                 <img src="./img/CatWiki_logo.png" alt="CatWiki logo">
                 <p class="title pl-2">Meowgle</p>
             </a>
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-                data-target="navbarBasicExample">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
@@ -27,7 +38,7 @@
     </nav>
 
     <div class="container mt-4 p-4 is-max-desktop">
-        <form action="php/signup.php" method="post">
+        <form action="signup.php" method="post">
             <div class="field">
                 <label class="label">First Name</label>
                 <div class="control">
@@ -54,13 +65,49 @@
                 <div class="control">
                     <input class="input" type="password" name="password" placeholder="Enter Your Password">
                 </div>
-            </div>
 
-            <div class="field">
-                <label class="label">Confirm Password</label>
-                <div class="control">
-                    <input class="input" type="password" name="confirm_password" placeholder="Confirm Your Password">
-                </div>
+                <?php
+                $conn = new mysqli($servername, $username, $password, $dbname);
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+
+                // Process the signup form
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    $first_name = $_POST["first_name"];
+                    $last_name = $_POST["last_name"];
+                    $email = $_POST["email"];
+                    $password = $_POST["password"];
+
+                    // Validate input
+
+                    // Hash the password
+                    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+                    // Check if the email is already registered
+                    $sql = "SELECT * FROM user WHERE email = '$email'";
+                    $result = $conn->query($sql);
+
+                    if ($result->num_rows > 0) {
+                        // Email already exists
+                        echo "This email is already registered. Please use a different email.";
+                    } else {
+                        // Email is available, insert the new user into the database
+                        $sql = "INSERT INTO user (first_name, last_name, email, password) VALUES ('$first_name', '$last_name', '$email', '$hashedPassword')";
+
+                        if ($conn->query($sql) === TRUE) {
+                            // Signup successful
+                            header("Location: login.php");
+                        } else {
+                            // Error occurred during signup
+                            echo "Error: " . $conn->error;
+                        }
+                    }
+                }
+
+                $conn->close();
+                ?>
+
             </div>
 
             <div class="field is-grouped">

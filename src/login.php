@@ -1,3 +1,17 @@
+<?php
+// Start the session
+session_start();
+
+// Database connection
+$servername = "localhost";
+$username = "root";
+$password = "Synkova574574";
+$dbname = "meowgle";
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,8 +31,7 @@
                 <img src="./img/logo.png" alt="CatWiki logo">
                 <p class="title pl-2">Meowgle</p>
             </a>
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-                data-target="navbarBasicExample">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
@@ -27,7 +40,7 @@
     </nav>
 
     <div class="container mt-4 p-4 is-max-desktop">
-        <form action="php/login.php" method="post">
+        <form action="login.php" method="post">
             <div class="field">
                 <label class="label">Email</label>
                 <div class="control">
@@ -40,7 +53,53 @@
                 <div class="control">
                     <input class="input" type="password" name="password" placeholder="Enter Your Password">
                 </div>
+
+                <?php
+                $conn = new mysqli($servername, $username, $password, $dbname);
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+
+                // Process the login form
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    $email = $_POST["email"];
+                    $password = $_POST["password"];
+
+                    // Validate input
+
+                    // Hash the password
+                    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+                    // Retrieve the user's hashed password from the database
+                    $sql = "SELECT password FROM user WHERE email = '$email'";
+                    $result = $conn->query($sql);
+
+                    if ($result->num_rows == 1) {
+                        $row = $result->fetch_assoc();
+                        $storedPassword = $row["password"];
+
+                        // Verify the password
+                        if (password_verify($password, $storedPassword)) {
+                            // Password is correct, create a session
+                            $_SESSION["email"] = $email;
+
+                            header("Location: main.php");
+                            exit();
+                        } else {
+                            // Password is incorrect
+                            echo "Invalid email or password.";
+                        }
+                    } else {
+                        // User not found
+                        echo "Invalid email or password.";
+                    }
+                }
+
+                $conn->close();
+                ?>
             </div>
+
+
 
             <div class="field is-grouped">
                 <div class="control">
@@ -51,7 +110,7 @@
                 </div>
             </div>
             <p class="m-4">
-                Don't have an account yet? <a href="signup.html">Sign up</a>
+                Don't have an account yet? <a href="signup.php">Sign up</a>
             </p>
         </form>
     </div>
@@ -59,12 +118,12 @@
 
 
     <footer class="footer">
-        <div class="content has-text-centered">
+        <divas class="content has-text-centered">
             <p>
                 <strong>Cat Wiki</strong> - Your ultimate destination for all things cat-related.<br>
                 Created by <a href="https://github.com/OndrejKulhavy">Ondřej Kulhavý</a> in 2023.
             </p>
-        </div>
+        </divas>
     </footer>
 
 </body>

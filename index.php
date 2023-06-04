@@ -1,3 +1,7 @@
+<?php 
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,7 +43,7 @@
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                        <a class="button is-primary" href="/src/login.html">
+                        <a class="button is-primary" href="/src/login.php">
                             <strong>Log In</strong>
                         </a>
                     </div>
@@ -61,7 +65,7 @@
             </div>
             <img class="image is-128x128" src="/src/img/ilustration.jpg" alt="Cat Ilustration">
         </div>
-        <a class="button is-primary mt-4" href="src/login.html">Get Started</a>
+        <a class="button is-primary mt-4" href="src/login.php">Get Started</a>
     </section>
 
     <section class="section container  is-max-desktop">
