@@ -8,6 +8,12 @@ $username = "root";
 $password = "Synkova574574";
 $dbname = "meowgle";
 
+// Check if the user is already logged in
+if (isset($_SESSION["email"])) {
+    header("Location: main.php");
+    exit();
+}
+
 ?>
 
 
@@ -20,14 +26,14 @@ $dbname = "meowgle";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="shortcut icon" href="./img/CatWiki_logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
     <title>Meowgle</title>
 </head>
 
 <body>
     <nav class="navbar container  is-max-desktop" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item" href="https://bulma.io">
+            <a class="navbar-item" href="../index.php">
                 <img src="./img/logo.png" alt="CatWiki logo">
                 <p class="title pl-2">Meowgle</p>
             </a>
@@ -106,7 +112,7 @@ $dbname = "meowgle";
                     <button class="button is-link">Log In</button>
                 </div>
                 <div class="control">
-                    <button class="button is-link is-light">Cancel</button>
+                    <a href="../index.php" class="button is-link is-light">Cancel</a>
                 </div>
             </div>
             <p class="m-4">

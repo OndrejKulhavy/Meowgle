@@ -17,8 +17,7 @@
                 <img src="./img/CatWiki_logo.png" alt="CatWiki logo">
                 <p class="title pl-2">Meowgle</p>
             </a>
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-                data-target="navbarBasicExample">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
@@ -27,7 +26,7 @@
 
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item">
+                <a class="navbar-item" href="./index.php">
                     Home
                 </a>
 
@@ -39,10 +38,7 @@
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                        <a class="button is-primary">
-                            <strong>Sign up</strong>
-                        </a>
-                        <a class="button is-light">
+                        <a class="button is-light" href="./login.php">
                             Log in
                         </a>
                     </div>
