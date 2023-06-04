@@ -10,15 +10,15 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./src/img/logo.png" type="image/png">
     <title>Meowgle</title>
 </head>
 
 <body>
     <nav class="navbar container  is-max-desktop" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item" href="../index.php">
-                <img src="./img/logo.png" alt="CatWiki logo">
+            <a class="navbar-item" href="index.php">
+                <img src="./src/img/logo.png" alt="CatWiki logo">
                 <p class="title pl-2">Meowgle</p>
             </a>
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">

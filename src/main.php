@@ -20,7 +20,7 @@ if (isset($_GET["logout"])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/logo.png" type="image/png">
     <title>Meowgle</title>
 </head>
 
@@ -55,8 +55,8 @@ if (isset($_GET["logout"])) {
     </nav>
     <div class="field container is-max-desktop mt-4">
         <div class="control is-flex is-flex-wrap-wrap is-flex-wrap-wrap">
-            <input id="search_text" class="input" type="text" placeholder="Search">
-            <progress id="progress" class="progress is-medium is-dark" max="100">45%</progress>
+            <input id="search_text" class="input" type="text" placeholder="Search for a cat breed">
+            <progress id="progress" class="progress is-medium is-dark m-4" max="100">45%</progress>
         </div>
     </div>
 
