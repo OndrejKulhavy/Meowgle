@@ -20,7 +20,7 @@ if (isset($_GET["logout"])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="shortcut icon" href="/img/logo.png" type="image/png">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/png">
     <title>Meowgle</title>
 </head>
 
@@ -181,7 +181,11 @@ if (isset($_GET["logout"])) {
 
         $(document).ready(function() {
             $("#progress").hide();
+
             $("#search_text").keyup(function() {
+                //make a sound
+                const audio = new Audio('./sounds/cat_meow.mp3');
+                audio.play();
                 $("#progress").show();
                 var search = $(this).val();
                 $.ajax({

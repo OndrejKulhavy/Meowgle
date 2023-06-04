@@ -74,7 +74,7 @@
     <footer class="footer">
         <div class="content has-text-centered">
             <p>
-                <strong>Cat Wiki</strong> - Your ultimate destination for all things cat-related.<br>
+                <strong>Meowgle</strong> - Your ultimate destination for all things cat-related.<br>
                 Created by <a href="https://github.com/OndrejKulhavy">Ondřej Kulhavý</a> in 2023.
             </p>
         </div>
